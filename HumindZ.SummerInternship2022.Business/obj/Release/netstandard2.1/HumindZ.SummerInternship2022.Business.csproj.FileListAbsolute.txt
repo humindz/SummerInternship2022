@@ -1,0 +1,10 @@
+C:\HumindZ\Internship2022Summer\SummerInternship2022\HumindZ.SummerInternship2022.Business\bin\Release\netstandard2.1\HumindZ.SummerInternship2022.Business.deps.json
+C:\HumindZ\Internship2022Summer\SummerInternship2022\HumindZ.SummerInternship2022.Business\bin\Release\netstandard2.1\HumindZ.SummerInternship2022.Business.dll
+C:\HumindZ\Internship2022Summer\SummerInternship2022\HumindZ.SummerInternship2022.Business\bin\Release\netstandard2.1\HumindZ.SummerInternship2022.Business.pdb
+C:\HumindZ\Internship2022Summer\SummerInternship2022\HumindZ.SummerInternship2022.Business\obj\Release\netstandard2.1\HumindZ.SummerInternship2022.Business.csproj.AssemblyReference.cache
+C:\HumindZ\Internship2022Summer\SummerInternship2022\HumindZ.SummerInternship2022.Business\obj\Release\netstandard2.1\HumindZ.SummerInternship2022.Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\HumindZ\Internship2022Summer\SummerInternship2022\HumindZ.SummerInternship2022.Business\obj\Release\netstandard2.1\HumindZ.SummerInternship2022.Business.AssemblyInfoInputs.cache
+C:\HumindZ\Internship2022Summer\SummerInternship2022\HumindZ.SummerInternship2022.Business\obj\Release\netstandard2.1\HumindZ.SummerInternship2022.Business.AssemblyInfo.cs
+C:\HumindZ\Internship2022Summer\SummerInternship2022\HumindZ.SummerInternship2022.Business\obj\Release\netstandard2.1\HumindZ.SummerInternship2022.Business.csproj.CoreCompileInputs.cache
+C:\HumindZ\Internship2022Summer\SummerInternship2022\HumindZ.SummerInternship2022.Business\obj\Release\netstandard2.1\HumindZ.SummerInternship2022.Business.dll
+C:\HumindZ\Internship2022Summer\SummerInternship2022\HumindZ.SummerInternship2022.Business\obj\Release\netstandard2.1\HumindZ.SummerInternship2022.Business.pdb

@@ -1,0 +1,86 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\HumindZ\\Internship2022Summer\\SummerInternship2022\\HumindZ.SummerInternship2022.Business\\HumindZ.SummerInternship2022.Business.csproj": {}
+  },
+  "projects": {
+    "C:\\HumindZ\\Internship2022Summer\\SummerInternship2022\\HumindZ.SummerInternship2022.Business\\HumindZ.SummerInternship2022.Business.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\HumindZ\\Internship2022Summer\\SummerInternship2022\\HumindZ.SummerInternship2022.Business\\HumindZ.SummerInternship2022.Business.csproj",
+        "projectName": "HumindZ.SummerInternship2022.Business",
+        "projectPath": "C:\\HumindZ\\Internship2022Summer\\SummerInternship2022\\HumindZ.SummerInternship2022.Business\\HumindZ.SummerInternship2022.Business.csproj",
+        "packagesPath": "C:\\Users\\Zoltan\\.nuget\\packages\\",
+        "outputPath": "C:\\HumindZ\\Internship2022Summer\\SummerInternship2022\\HumindZ.SummerInternship2022.Business\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Zoltan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\local_nugets": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://swissbilling.pkgs.visualstudio.com/_packaging/Swissbilling/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.107\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
