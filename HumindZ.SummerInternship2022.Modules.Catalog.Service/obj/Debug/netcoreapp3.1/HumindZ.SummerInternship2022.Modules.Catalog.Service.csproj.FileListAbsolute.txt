@@ -1,0 +1,10 @@
+C:\Praktika-HumindZ\SummerInternship2022\HumindZ.SummerInternship2022.Modules.Catalog.Service\bin\Debug\netcoreapp3.1\HumindZ.SummerInternship2022.Modules.Catalog.Service.deps.json
+C:\Praktika-HumindZ\SummerInternship2022\HumindZ.SummerInternship2022.Modules.Catalog.Service\bin\Debug\netcoreapp3.1\HumindZ.SummerInternship2022.Modules.Catalog.Service.dll
+C:\Praktika-HumindZ\SummerInternship2022\HumindZ.SummerInternship2022.Modules.Catalog.Service\bin\Debug\netcoreapp3.1\HumindZ.SummerInternship2022.Modules.Catalog.Service.pdb
+C:\Praktika-HumindZ\SummerInternship2022\HumindZ.SummerInternship2022.Modules.Catalog.Service\obj\Debug\netcoreapp3.1\HumindZ.SummerInternship2022.Modules.Catalog.Service.csproj.AssemblyReference.cache
+C:\Praktika-HumindZ\SummerInternship2022\HumindZ.SummerInternship2022.Modules.Catalog.Service\obj\Debug\netcoreapp3.1\HumindZ.SummerInternship2022.Modules.Catalog.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Praktika-HumindZ\SummerInternship2022\HumindZ.SummerInternship2022.Modules.Catalog.Service\obj\Debug\netcoreapp3.1\HumindZ.SummerInternship2022.Modules.Catalog.Service.AssemblyInfoInputs.cache
+C:\Praktika-HumindZ\SummerInternship2022\HumindZ.SummerInternship2022.Modules.Catalog.Service\obj\Debug\netcoreapp3.1\HumindZ.SummerInternship2022.Modules.Catalog.Service.AssemblyInfo.cs
+C:\Praktika-HumindZ\SummerInternship2022\HumindZ.SummerInternship2022.Modules.Catalog.Service\obj\Debug\netcoreapp3.1\HumindZ.SummerInternship2022.Modules.Catalog.Service.csproj.CoreCompileInputs.cache
+C:\Praktika-HumindZ\SummerInternship2022\HumindZ.SummerInternship2022.Modules.Catalog.Service\obj\Debug\netcoreapp3.1\HumindZ.SummerInternship2022.Modules.Catalog.Service.dll
+C:\Praktika-HumindZ\SummerInternship2022\HumindZ.SummerInternship2022.Modules.Catalog.Service\obj\Debug\netcoreapp3.1\HumindZ.SummerInternship2022.Modules.Catalog.Service.pdb

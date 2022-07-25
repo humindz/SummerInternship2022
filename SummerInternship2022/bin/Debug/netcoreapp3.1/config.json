@@ -1,0 +1,14 @@
+{
+	"Colors": {
+		"Favorite": "Blue"
+	},
+	"ConnectionStrings": {
+		"HumindZSummerInternship2022ConnectionString": "Data Source=(localdb)\\ProjectsV13;Database=SummerInternship2022Db;Integrated Security=True;MultipleActiveResultSets=true;"
+	},
+	"Logging": {
+		"LogLevel": {
+			"Default": "Information",
+			"Microsoft": "Warning"
+		}
+	}
+}
