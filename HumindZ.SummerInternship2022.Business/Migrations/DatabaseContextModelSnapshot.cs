@@ -19,6 +19,88 @@ namespace HumindZ.SummerInternship2022.Business.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("HumindZ.SummerInternship2022.Business.Product", b =>
+                {
+                    b.Property<Guid>("ProductId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("ProductCategoryType")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProductLongDescription")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProductName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProductShortDescription")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProductVersion")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("ProductVersionDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ProductVersionNotes")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ProductId");
+
+                    b.ToTable("Product");
+                });
+
+            modelBuilder.Entity("HumindZ.SummerInternship2022.Business.ProductDocumentDocumentationLinks", b =>
+                {
+                    b.Property<Guid>("ProductDocumentDocumentationLinksId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("ProductDocumentDocumentationFile")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProductDocumentDocumentationLinksDescription")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProductDocumentDocumentationLinksName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProductDocumentLinksUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid?>("ProductId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("ProductDocumentDocumentationLinksId");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("ProductDocumentDocumentationLinks");
+                });
+
+            modelBuilder.Entity("HumindZ.SummerInternship2022.Business.ProductDocumentExamples", b =>
+                {
+                    b.Property<Guid>("ProductDocumentExamplesId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("ProductDocumentExampleFile")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProductDocumentExampleName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid?>("ProductId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("ProductDocumentExamplesId");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("ProductDocumentExamples");
+                });
+
             modelBuilder.Entity("HumindZ.SummerInternship2022.Business.User", b =>
                 {
                     b.Property<Guid>("Id")
@@ -37,6 +119,20 @@ namespace HumindZ.SummerInternship2022.Business.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("HumindZ.SummerInternship2022.Business.ProductDocumentDocumentationLinks", b =>
+                {
+                    b.HasOne("HumindZ.SummerInternship2022.Business.Product", null)
+                        .WithMany("ProductDocumentDocumentationLinks")
+                        .HasForeignKey("ProductId");
+                });
+
+            modelBuilder.Entity("HumindZ.SummerInternship2022.Business.ProductDocumentExamples", b =>
+                {
+                    b.HasOne("HumindZ.SummerInternship2022.Business.Product", "Product")
+                        .WithMany("ProductDocumentExamples")
+                        .HasForeignKey("ProductId");
                 });
 #pragma warning restore 612, 618
         }
