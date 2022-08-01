@@ -201,3 +201,16 @@ C:\Praktika-HumindZ\SummerInternship2022\HumindZ.SummerInternship2022.Host\Humin
 C:\Praktika-HumindZ\SummerInternship2022\HumindZ.SummerInternship2022.Host\HumindZ.SummerInternship2022.Host\obj\Debug\netcoreapp3.1\HumindZ.SummerInternship2022.Host.RazorTargetAssemblyInfo.cache
 C:\Praktika-HumindZ\SummerInternship2022\HumindZ.SummerInternship2022.Host\HumindZ.SummerInternship2022.Host\obj\Debug\netcoreapp3.1\HumindZ.SummerInternship2022.Host.csproj.CopyComplete
 C:\Praktika-HumindZ\SummerInternship2022\HumindZ.SummerInternship2022.Host\HumindZ.SummerInternship2022.Host\obj\Debug\netcoreapp3.1\HumindZ.SummerInternship2022.Host.genruntimeconfig.cache
+C:\Praktika-HumindZ\SummerInternship2022\HumindZ.SummerInternship2022.Host\HumindZ.SummerInternship2022.Host\bin\Debug\netcoreapp3.1\Autofac.dll
+C:\Praktika-HumindZ\SummerInternship2022\HumindZ.SummerInternship2022.Host\HumindZ.SummerInternship2022.Host\bin\Debug\netcoreapp3.1\AutoMapper.dll
+C:\Praktika-HumindZ\SummerInternship2022\HumindZ.SummerInternship2022.Host\HumindZ.SummerInternship2022.Host\bin\Debug\netcoreapp3.1\BCrypt.Net-Next.dll
+C:\Praktika-HumindZ\SummerInternship2022\HumindZ.SummerInternship2022.Host\HumindZ.SummerInternship2022.Host\bin\Debug\netcoreapp3.1\MediaBrowser.Common.dll
+C:\Praktika-HumindZ\SummerInternship2022\HumindZ.SummerInternship2022.Host\HumindZ.SummerInternship2022.Host\bin\Debug\netcoreapp3.1\MediaBrowser.Model.dll
+C:\Praktika-HumindZ\SummerInternship2022\HumindZ.SummerInternship2022.Host\HumindZ.SummerInternship2022.Host\bin\Debug\netcoreapp3.1\Tweetinvi.Controllers.dll
+C:\Praktika-HumindZ\SummerInternship2022\HumindZ.SummerInternship2022.Host\HumindZ.SummerInternship2022.Host\bin\Debug\netcoreapp3.1\Tweetinvi.Core.dll
+C:\Praktika-HumindZ\SummerInternship2022\HumindZ.SummerInternship2022.Host\HumindZ.SummerInternship2022.Host\bin\Debug\netcoreapp3.1\Tweetinvi.Credentials.dll
+C:\Praktika-HumindZ\SummerInternship2022\HumindZ.SummerInternship2022.Host\HumindZ.SummerInternship2022.Host\bin\Debug\netcoreapp3.1\Tweetinvi.Logic.dll
+C:\Praktika-HumindZ\SummerInternship2022\HumindZ.SummerInternship2022.Host\HumindZ.SummerInternship2022.Host\bin\Debug\netcoreapp3.1\Tweetinvi.Security.dll
+C:\Praktika-HumindZ\SummerInternship2022\HumindZ.SummerInternship2022.Host\HumindZ.SummerInternship2022.Host\bin\Debug\netcoreapp3.1\Tweetinvi.Streams.dll
+C:\Praktika-HumindZ\SummerInternship2022\HumindZ.SummerInternship2022.Host\HumindZ.SummerInternship2022.Host\bin\Debug\netcoreapp3.1\Tweetinvi.WebLogic.dll
+C:\Praktika-HumindZ\SummerInternship2022\HumindZ.SummerInternship2022.Host\HumindZ.SummerInternship2022.Host\bin\Debug\netcoreapp3.1\Tweetinvi.dll

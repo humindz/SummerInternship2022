@@ -2,7 +2,7 @@ namespace HumindZ.SummerInternship2022.Host
 {
     using HumindZ.SummerInternship2022.Business;
     using HumindZ.SummerInternship2022.Services;
-
+    using Microsoft.AspNetCore.Authentication;
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.Extensions.Configuration;
@@ -27,7 +27,7 @@ namespace HumindZ.SummerInternship2022.Host
             services.AddDatabase(Configuration);
             services.AddBusinessModule();
             services.AddServiceModule();
-            
+
             services.AddCors(options =>
             {
                 options.AddPolicy(name: this.policyName,
@@ -41,6 +41,10 @@ namespace HumindZ.SummerInternship2022.Host
 
             // Register the Swagger services
             services.AddSwaggerDocument(configure => configure.Title = "HumindZ Summer Internship 2022 API");
+
+            // Configure basic authentication
+            services.AddAuthentication("BasicAuthentication")
+                .AddScheme<AuthenticationSchemeOptions, BasicAuthenticationHandler>("BasicAuthentication", null);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -54,6 +58,8 @@ namespace HumindZ.SummerInternship2022.Host
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseAuthentication();
 
             app.UseAuthorization();
 

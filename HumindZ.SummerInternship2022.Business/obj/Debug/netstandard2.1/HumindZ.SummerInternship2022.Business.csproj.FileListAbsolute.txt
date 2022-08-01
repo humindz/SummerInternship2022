@@ -27,3 +27,4 @@ C:\Praktika-HumindZ\SummerInternship2022\HumindZ.SummerInternship2022.Business\o
 C:\Praktika-HumindZ\SummerInternship2022\HumindZ.SummerInternship2022.Business\bin\Debug\netstandard2.1\HumindZ.SummerInternship2022.Business.deps.json
 C:\Praktika-HumindZ\SummerInternship2022\HumindZ.SummerInternship2022.Business\bin\Debug\netstandard2.1\HumindZ.SummerInternship2022.Business.dll
 C:\Praktika-HumindZ\SummerInternship2022\HumindZ.SummerInternship2022.Business\bin\Debug\netstandard2.1\HumindZ.SummerInternship2022.Business.pdb
+C:\Praktika-HumindZ\SummerInternship2022\HumindZ.SummerInternship2022.Business\obj\Debug\netstandard2.1\HumindZ.SummerInternship2022.Business.csproj.AssemblyReference.cache
