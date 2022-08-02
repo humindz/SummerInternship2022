@@ -21,12 +21,17 @@ export class UserService {
 
   constructor(private http:HttpClient) {}
 
+  
 
   public async login(username: string, password: string): Promise<UserDto> {
     let body = JSON.stringify({userName: username, password: password})
+    let options = {
+      headers: { 'Content-Type': 'application/json' },
+    };
     return firstValueFrom(
+      
       // this.api.login({ userParam: { userName: username, password: password } 
-      this.http.post(`${environment.serverUrl}/User/login`,body)
+      this.http.post(`${environment.serverUrl}/User/login`,body, options)
       
     ).then((data: any) => {
       console.log(data)

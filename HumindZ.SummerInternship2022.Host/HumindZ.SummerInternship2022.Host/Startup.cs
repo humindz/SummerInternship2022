@@ -24,10 +24,6 @@ namespace HumindZ.SummerInternship2022.Host
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddDatabase(Configuration);
-            services.AddBusinessModule();
-            services.AddServiceModule();
-
             services.AddCors(options =>
             {
                 options.AddPolicy(name: this.policyName,
@@ -38,6 +34,10 @@ namespace HumindZ.SummerInternship2022.Host
                             .AllowAnyHeader();
                     });
             });
+            services.AddDatabase(Configuration);
+            services.AddBusinessModule();
+            services.AddServiceModule();
+
 
             // Register the Swagger services
             services.AddSwaggerDocument(configure => configure.Title = "HumindZ Summer Internship 2022 API");
@@ -55,9 +55,12 @@ namespace HumindZ.SummerInternship2022.Host
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors(this.policyName);
+
+            app.UseHttpsRedirection();
 
             app.UseAuthentication();
 

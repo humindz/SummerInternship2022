@@ -214,3 +214,6 @@ C:\Praktika-HumindZ\SummerInternship2022\HumindZ.SummerInternship2022.Host\Humin
 C:\Praktika-HumindZ\SummerInternship2022\HumindZ.SummerInternship2022.Host\HumindZ.SummerInternship2022.Host\bin\Debug\netcoreapp3.1\Tweetinvi.Streams.dll
 C:\Praktika-HumindZ\SummerInternship2022\HumindZ.SummerInternship2022.Host\HumindZ.SummerInternship2022.Host\bin\Debug\netcoreapp3.1\Tweetinvi.WebLogic.dll
 C:\Praktika-HumindZ\SummerInternship2022\HumindZ.SummerInternship2022.Host\HumindZ.SummerInternship2022.Host\bin\Debug\netcoreapp3.1\Tweetinvi.dll
+C:\Praktika-HumindZ\SummerInternship2022\HumindZ.SummerInternship2022.Host\HumindZ.SummerInternship2022.Host\bin\Debug\netcoreapp3.1\Acr.UserDialogs.dll
+C:\Praktika-HumindZ\SummerInternship2022\HumindZ.SummerInternship2022.Host\HumindZ.SummerInternship2022.Host\bin\Debug\netcoreapp3.1\FluentValidation.dll
+C:\Praktika-HumindZ\SummerInternship2022\HumindZ.SummerInternship2022.Host\HumindZ.SummerInternship2022.Host\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Metadata.dll

@@ -214,10 +214,6 @@
               "target": "Package",
               "version": "[11.0.1, )"
             },
-            "Fluent.Infrastructure": {
-              "target": "Package",
-              "version": "[2.0.0-beta-01, )"
-            },
             "MediaBrowser.Common": {
               "target": "Package",
               "version": "[4.7.3, )"
