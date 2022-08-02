@@ -1,9 +1,14 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace HumindZ.SummerInternship2022.Business.Repositories.UserRepository
 {
     public interface IUserRepository
     {
-        Task<User> GetByUserNameAsync(string userName);
+        public Task<User> GetUserByNameAsync(string userName);
+        public Task<IEnumerable<User>> GetUsersAsync();
+        public Task<User> GetUserByIdAsync(Guid id);
+
     }
 }

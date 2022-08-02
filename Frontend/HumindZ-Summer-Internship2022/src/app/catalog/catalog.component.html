@@ -1,0 +1,39 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<div class='card'>
+    <div class='card-header'>
+      {{pageTitle}} <br>
+      {{pageSubTitle}}
+    </div>
+
+    <div class="container">
+        <div class="row">
+          <div class="col-sm-3 " *ngFor="let product of filteredProducts">
+            <mat-card>
+                <mat-card-header>
+                  
+                  <mat-card-title>{{product.ProductName}}</mat-card-title>
+                  <mat-card-subtitle>{{product.ProductCategoryType}}</mat-card-subtitle>
+                </mat-card-header>
+                
+                <mat-card-content>
+                  <p>
+                    {{product.ProductShortDescription}}
+                  </p>
+                </mat-card-content>
+                <mat-card-actions>
+                  <button mat-button>BUY</button>
+                  <button mat-button>DETAILS</button>
+                </mat-card-actions>
+            </mat-card>
+    
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf='errorMessage'
+       class='alert alert-danger'>
+    Error: {{ errorMessage }}
+  </div>

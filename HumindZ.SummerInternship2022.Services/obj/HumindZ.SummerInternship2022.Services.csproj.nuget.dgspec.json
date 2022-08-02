@@ -40,6 +40,10 @@
         "netstandard2.1": {
           "targetAlias": "netstandard2.1",
           "dependencies": {
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.0.3, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.1.2, )"
@@ -113,6 +117,36 @@
       "frameworks": {
         "netstandard2.1": {
           "targetAlias": "netstandard2.1",
+          "dependencies": {
+            "Acr.UserDialogs": {
+              "target": "Package",
+              "version": "[7.2.0.564, )"
+            },
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[11.0.1, )"
+            },
+            "MediaBrowser.Common": {
+              "target": "Package",
+              "version": "[4.7.3, )"
+            },
+            "Microsoft.AspNetCore.Authentication": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Metadata": {
+              "target": "Package",
+              "version": "[6.0.7, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "TweetinviAPI": {
+              "target": "Package",
+              "version": "[5.0.4, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

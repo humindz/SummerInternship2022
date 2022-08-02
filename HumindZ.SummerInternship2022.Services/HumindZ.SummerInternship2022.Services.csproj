@@ -5,6 +5,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Acr.UserDialogs" Version="7.2.0.564" />
+    <PackageReference Include="AutoMapper" Version="11.0.1" />
+    <PackageReference Include="MediaBrowser.Common" Version="4.7.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Metadata" Version="6.0.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Abstractions" Version="2.2.0" />
+    <PackageReference Include="TweetinviAPI" Version="5.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\HumindZ.SummerInternship2022.Business\HumindZ.SummerInternship2022.Business.csproj" />
   </ItemGroup>
 

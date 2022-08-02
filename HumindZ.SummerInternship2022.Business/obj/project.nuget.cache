@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Ym8QxjacHfFukHM3V42bE2iXH3pYFxMTBFdlpkoM2fFwKCbhKmseLUe6Clr8co3zFMGe7cDIHv/Eoyce2SrGEg==",
+  "dgSpecHash": "YTkC8qSv907LMvu4hjfnzGd40XVjoP/JKJu7JtnEf5YBLe7ywyKp7qmbmudqXZxxOCx+i5GFRJlibDwQrdGVkA==",
   "success": true,
   "projectFilePath": "C:\\Praktika-HumindZ\\SummerInternship2022\\HumindZ.SummerInternship2022.Business\\HumindZ.SummerInternship2022.Business.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Laci\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\Laci\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.0\\microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",
     "C:\\Users\\Laci\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
     "C:\\Users\\Laci\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

@@ -21,7 +21,7 @@
     <Import Project="$(NuGetPackageRoot)microsoft.entityframeworkcore.design\3.1.2\build\netcoreapp2.0\Microsoft.EntityFrameworkCore.Design.props" Condition="Exists('$(NuGetPackageRoot)microsoft.entityframeworkcore.design\3.1.2\build\netcoreapp2.0\Microsoft.EntityFrameworkCore.Design.props')" />
   </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <PkgNewtonsoft_Json Condition=" '$(PkgNewtonsoft_Json)' == '' ">C:\Users\Laci\.nuget\packages\newtonsoft.json\9.0.1</PkgNewtonsoft_Json>
+    <PkgTweetinviAPI Condition=" '$(PkgTweetinviAPI)' == '' ">C:\Users\Laci\.nuget\packages\tweetinviapi\5.0.4</PkgTweetinviAPI>
     <PkgMicrosoft_Extensions_ApiDescription_Server Condition=" '$(PkgMicrosoft_Extensions_ApiDescription_Server)' == '' ">C:\Users\Laci\.nuget\packages\microsoft.extensions.apidescription.server\6.0.3</PkgMicrosoft_Extensions_ApiDescription_Server>
     <PkgMicrosoft_EntityFrameworkCore_Tools Condition=" '$(PkgMicrosoft_EntityFrameworkCore_Tools)' == '' ">C:\Users\Laci\.nuget\packages\microsoft.entityframeworkcore.tools\3.1.2</PkgMicrosoft_EntityFrameworkCore_Tools>
   </PropertyGroup>
