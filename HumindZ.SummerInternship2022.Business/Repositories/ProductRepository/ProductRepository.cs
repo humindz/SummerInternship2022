@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace HumindZ.SummerInternship2022.Business.Repositories.ProductRepository
@@ -16,5 +17,15 @@ namespace HumindZ.SummerInternship2022.Business.Repositories.ProductRepository
         {
             return await context.Product.FirstOrDefaultAsync(e => e.ProductName.Equals(productName));
         }
+
+        public async Task<IEnumerable<Product>> GetAllProductsAsync()
+        {
+            return await context.Product.ToListAsync();
+        }
+
+       /* public async Task<IEnumerable<Product>> GetAllProductsByCategoryAsync(string categoryName)
+        {
+            return null; *//*context.Product.ToListAsync(e => e.ProductCategoryType.Equals(categoryName));*//*
+        }*/
     }
 }

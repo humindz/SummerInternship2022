@@ -1,9 +1,8 @@
-﻿namespace HumindZ.SummerInternship2022.Business
-{
-    using System;
-    using System.Collections.Generic;
+﻿using System;
 
-    public class Product
+namespace HumindZ.SummerInternship2022.Services.Product
+{
+    public class ProductDto
     {
         public Guid ProductId { get; set; }
         public string ProductName { get; set; }
@@ -14,7 +13,5 @@
         public DateTime ProductVersionDate { get; set; }
         public string ProductVersionNotes { get; set; }
         public string ProductPrice { get; set; }
-        public IList<ProductDocumentExamples> ProductDocumentExamples { get; set; }
-        public IList<ProductDocumentDocumentationLinks> ProductDocumentDocumentationLinks { get; set; }
     }
 }

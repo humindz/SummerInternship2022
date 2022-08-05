@@ -21,10 +21,9 @@ export class LoginComponent implements OnInit {
   onSubmit() { 
     let userName = (<HTMLInputElement>document.getElementById("username")).value;
     let userPassword = (<HTMLInputElement>document.getElementById("password")).value;
-    console.log(userName, userPassword);
-    console.log('haha')
-
-    this.userService.login(userName, userPassword);//.then();
+    
+    this.userService.login(userName, userPassword)
+    .then(()=>this.router.navigate(['catalog']));//.then();
 
   }
 }

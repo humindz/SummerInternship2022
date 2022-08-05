@@ -34,6 +34,9 @@ namespace HumindZ.SummerInternship2022.Business.Migrations
                     b.Property<string>("ProductName")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("ProductPrice")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("ProductShortDescription")
                         .HasColumnType("nvarchar(max)");
 

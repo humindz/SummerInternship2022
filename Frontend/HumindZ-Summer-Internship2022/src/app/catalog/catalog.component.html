@@ -1,38 +1,101 @@
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+<div class="topnav">
+    <a class="navbar-brand" href="/catalog">
+        <div class="logo-image">
+              <img src="./img-logo.png" class="img-fluid">
+        </div>
+  </a>
+    <a href="/catalog">Catalog</a>
+    <a href="/login">Login</a>
+  </div>
+  <br><br><br>
 
 <div class='card'>
-    <div class='card-header'>
-      {{pageTitle}} <br>
-      {{pageSubTitle}}
-    </div>
 
-    <div class="container">
-        <div class="row">
-          <div class="col-sm-3 " *ngFor="let product of filteredProducts">
-            <mat-card>
-                <mat-card-header>
-                  
-                  <mat-card-title>{{product.ProductName}}</mat-card-title>
-                  <mat-card-subtitle>{{product.ProductCategoryType}}</mat-card-subtitle>
-                </mat-card-header>
-                
-                <mat-card-content>
-                  <p>
-                    {{product.ProductShortDescription}}
-                  </p>
-                </mat-card-content>
-                <mat-card-actions>
-                  <button mat-button>BUY</button>
-                  <button mat-button>DETAILS</button>
-                </mat-card-actions>
-            </mat-card>
+    <!-- <div class="grid-container">
+    <div class="item1">
+      
+
+
+    </div> -->
+
+    <br><br><br>
+    <div>
+        
+
+            <div class="grid-container" >
     
-        </div>
-      </div>
+                <div class="item1">
+                    <h2>{{pageTitle}} </h2>
+                    <h3>{{pageSubTitle}} </h3>
+                </div>
+                <div class="item2">
+                    <p class = "categories">Categories</p>
+                    <mat-checkbox >Optical Character Recognition</mat-checkbox><br>
+                    <mat-checkbox >Prediction</mat-checkbox><br>
+                    <mat-checkbox >Product Recommendations</mat-checkbox><br>
+                    <mat-checkbox >Preprocessing on Data</mat-checkbox><br>
+                    <mat-checkbox >Automate a Process</mat-checkbox><br>
+                </div>
+                <div class="item3">
+                    <br>
+                    <p>All Models</p>
+                    <div *ngFor="let product of products">
+                        <mat-card >
+                            <mat-card-header>
+                            
+                            <mat-card-title>{{product.productName}}</mat-card-title>
+                            <mat-card-subtitle>{{product.productCategoryType}}</mat-card-subtitle>
+                            </mat-card-header>
+                            
+                            <mat-card-content>
+                            <p>
+                                {{product.productShortDescription}}
+                            </p>
+                            </mat-card-content>
+                            <mat-card-actions>
+                                <button class="buttonCard">
+                                    <a class="textButtonCard">See Details </a> 
+                                
+                                <a class = "creditArrow">  &#8674;  </a>
+                                        
+                                <button class="creditCard">{{product.productPrice}} credits</button>
+                                    
+                                </button>
+                            </mat-card-actions>
+                        </mat-card>
+                
+                    </div>
+                </div>
+
+              </div>
+
+            <!-- <div class="grid-container"> -->
+
+            
+            <!-- <div class = "item1">
+            </div> -->
+
+            <!-- <div class = "item2">
+                
+
+            </div> -->
+
+        
+            <!-- <div >
+                
+
+                <div class = "item3">
+                    
+            </div>
+            </div>   -->
+        </div> 
     </div>
-  </div>
+<!-- </div> -->
+            
+     
+   
   <div *ngIf='errorMessage'
        class='alert alert-danger'>
     Error: {{ errorMessage }}

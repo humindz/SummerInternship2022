@@ -2,6 +2,7 @@ import { Component, OnDestroy, OnInit } from "@angular/core";
 import { Subscription } from "rxjs";
 import { IProduct } from "./Product";
 import { MatCardModule } from '@angular/material/card';
+import { ProductService } from '../services/product.service'
 
 @Component({
   selector: 'app-catalog',
@@ -27,72 +28,14 @@ export class CatalogComponent implements OnInit, OnDestroy {
   //   this.filteredProducts = this.performFilter(value);
   // }
 
-  produt1 = {
-    ProductId: 1,
-    ProductName: 'Pelda',
-    ProductCategoryType: 'Tipus1',
-    ProductShortDescription: 'fkjafj lsa jflsaj flsj alj flsaj f',
-    ProductLongDescription: 'kf jsalfj lsa jfka jflsja lsajl fjsal jl',
-    ProductVersion: '1.10',
-    ProductVersionDate: '2022.08.01',
-    ProductVersionNotes: 'None',
-    };
+
     
-  filteredProducts: IProduct[] = [{
-    ProductId: 'aaa11',
-    ProductName: 'Pelda1',
-    ProductCategoryType: 'Tipus1',
-    ProductShortDescription: 'fkjafj lsa jflsaj flsj alj flsaj f',
-    ProductLongDescription: 'kf jsalfj lsa jfka jflsja lsajl fjsal jl',
-    ProductVersion: '1.10',
-    ProductVersionDate: '2022.08.01',
-    ProductVersionNotes: 'None',
-  },
-  {
-    ProductId: 'aaa12',
-    ProductName: 'Pelda2',
-    ProductCategoryType: 'Tipus2',
-    ProductShortDescription: 'fkjafj lsa ffffffffffffjflsaj flsj alj flsaj f',
-    ProductLongDescription: 'kf jsalfj lsa jfka jflsja lsajl fjsal jl',
-    ProductVersion: '1.10',
-    ProductVersionDate: '2022.08.01',
-    ProductVersionNotes: 'None',
-  },
-  {
-    ProductId: 'aaa13',
-    ProductName: 'Pelda3',
-    ProductCategoryType: 'Tipus1',
-    ProductShortDescription: 'fkjafj lsa gggggggggggjflsaj flsj alj flsaj f',
-    ProductLongDescription: 'kf jsalfj lsa jfka jflsja lsajl fjsal jl',
-    ProductVersion: '1.10',
-    ProductVersionDate: '2022.08.01',
-    ProductVersionNotes: 'None',
-  },
-  {
-    ProductId: 'aaa14',
-    ProductName: 'Pelda4',
-    ProductCategoryType: 'Tipus3',
-    ProductShortDescription: 'fkjafj lsa jflsaj flsj alj flsaj f',
-    ProductLongDescription: 'kf jsalfj lsa jfka jflsja lsajl fjsal jl',
-    ProductVersion: '1.10',
-    ProductVersionDate: '2022.08.01',
-    ProductVersionNotes: 'None',
-  },
-  {
-    ProductId: 'aaa11111',
-    ProductName: 'Pelda5',
-    ProductCategoryType: 'Tipus2',
-    ProductShortDescription: 'fkjafj lsa jflsaj flsj alj flsaj f',
-    ProductLongDescription: 'kf jsalfj lsa jfka jflsja lsajl fjsal jl',
-    ProductVersion: '1.10',
-    ProductVersionDate: '2022.08.01',
-    ProductVersionNotes: 'None',
-  }];
+  filteredProducts: IProduct[] = [];
   products: IProduct[] = [];
 
  
   constructor(
-    // private productService: ProductService
+    private productService: ProductService
     ) {}
 
   // performFilter(filterBy: string): IProduct[] {
@@ -104,13 +47,12 @@ export class CatalogComponent implements OnInit, OnDestroy {
 
 
   ngOnInit(): void {
-    // this.sub = this.productService.getProducts().subscribe({
-    //   next: products => {
-    //     this.products = products;
-    //     this.filteredProducts = this.products;
-    //   },
-    //   error: err => this.errorMessage = err
-    // });
+     this.productService.GetProducts().then((productDtos)=>{
+      this.filteredProducts = productDtos;
+      this.products = productDtos;
+      console.log(this.products);
+      console.log(this.products[0].productName);
+    });
   }
 
   ngOnDestroy(): void {
