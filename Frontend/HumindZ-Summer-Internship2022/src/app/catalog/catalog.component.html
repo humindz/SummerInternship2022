@@ -1,38 +1,85 @@
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-<div class='card'>
-    <div class='card-header'>
-      {{pageTitle}} <br>
-      {{pageSubTitle}}
-    </div>
 
-    <div class="container">
-        <div class="row">
-          <div class="col-sm-3 " *ngFor="let product of filteredProducts">
-            <mat-card>
-                <mat-card-header>
-                  
-                  <mat-card-title>{{product.ProductName}}</mat-card-title>
-                  <mat-card-subtitle>{{product.ProductCategoryType}}</mat-card-subtitle>
-                </mat-card-header>
-                
-                <mat-card-content>
-                  <p>
-                    {{product.ProductShortDescription}}
-                  </p>
-                </mat-card-content>
-                <mat-card-actions>
-                  <button mat-button>BUY</button>
-                  <button mat-button>DETAILS</button>
-                </mat-card-actions>
-            </mat-card>
-    
-        </div>
-      </div>
-    </div>
+<div class="topnav">
+    <a href="/catalog">Catalog</a>
+    <a href="/login">Login</a>
   </div>
+  <br>
+
+ 
+<div class='card'>
+
+  
+    <br><br><br>
+            <div class="grid-container" >
+    
+                <div class="item1">
+                    <h2>{{pageTitle}} </h2>
+                    <h3>{{pageSubTitle}} </h3>
+                </div>
+                <div class="item2">
+                    <p class = "categories">Categories</p>            
+
+                    <input type="checkbox" name="Image Recognition" id="Image Recognition" (click)="filterClicked()"> 
+                    <label for="Image Recognition">  Image Recognition</label><br>
+
+                    <input type="checkbox" name="Prediction" id="Prediction" (click)="filterClicked()"/>  
+                    <label for="Prediction">  Prediction</label><br>
+
+                    <input type="checkbox" name="Product Recommendations" id="Product Recommendations" (click)="filterClicked()"/>  
+                    <label for="Product Recommendations">  Product Recommendations</label><br>
+
+                    <input type="checkbox" name="Preprocessing on Data" id="Preprocessing on Data" (click)="filterClicked()"/>  
+                    <label for="Preprocessing on Data">  Preprocessing on Data</label> <br>
+
+                    <input type="checkbox" name="Automate a Process" id="Automate a Process" (click)="filterClicked()" />  
+                    <label for="Automate a Process">  Automate a Process</label><br>
+
+                </div>
+                <div class="item3">
+                    <br>
+                    <p>All Models</p>
+                    
+
+                            <div style="display:flex; flex-wrap:wrap; justify-content:flex-start">
+                                
+                       
+                            <div *ngFor="let product of products" class="cardType">
+                                <mat-card>
+                                    <mat-card-header>
+                                    
+                                    <mat-card-title>{{product.productName}}</mat-card-title>
+                                    <mat-card-subtitle>{{product.productCategoryType}}</mat-card-subtitle>
+                                    </mat-card-header>
+                                    
+                                    <mat-card-content>
+                                    <p>
+                                        {{product.productShortDescription}}
+                                    </p>
+                                    </mat-card-content>
+                                    <mat-card-actions align="end">
+                                        <button class="buttonCard" >
+                                            <a class="textButtonCard">See Details </a> 
+                                        
+                                        <a class = "creditArrow">  &#8674;  </a>
+                                                
+                                        <button class="creditCard">{{product.productPrice}} credits</button>
+                                            
+                                        </button>
+                                    </mat-card-actions>
+                                </mat-card>
+                        
+                            </div>
+                    </div>
+                    </div>
+            </div>
+
+            
+            
+        <!-- </div>  -->
+            
+     
+   
   <div *ngIf='errorMessage'
        class='alert alert-danger'>
     Error: {{ errorMessage }}

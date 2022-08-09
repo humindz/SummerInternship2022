@@ -2,9 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\HumindZ.SummerInternship2022.Business",
-    "\\HumindZ.SummerInternship2022.Services",
-    "\\HumindZ.SummerInternship2022.Services\\Product"
+    "\\HumindZ.SummerInternship2022.Services"
   ],
-  "SelectedNode": "\\HumindZ.SummerInternship2022.Business\\DatabaseContext.cs",
+  "SelectedNode": "\\HumindZ.SummerInternship2022.Business",
   "PreviewInSolutionExplorer": false
 }

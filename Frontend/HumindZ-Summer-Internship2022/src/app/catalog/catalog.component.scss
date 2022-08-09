@@ -1,3 +1,247 @@
 .inline-block {
     display: inline-block;
   }
+
+  .column {
+    float: left;
+    width: 50%;
+    }
+
+    .row:after {
+    content: "";
+    display: table;
+    clear: both;
+    }
+
+    .example-h2 {
+        margin: 10px;
+      }
+      
+      .example-section {
+        display: flex;
+        align-content: left;
+        align-items: left;
+        height: 60px;
+      }
+      
+      .example-margin {
+        margin: 20px 0px;
+        align-content: left;
+      }
+
+      h2 { color: #000000;
+        font-family: 'Helvetica Neue', sans-serif;
+        font-size: 46px;
+        font-weight: 50;
+        line-height: 50px;
+        letter-spacing: 1px;
+        padding: 0 0 5px;
+        margin-left: 30px;
+    }
+
+    h3 { color: #000000;
+        font-family: 'Helvetica Neue', sans-serif;
+        font-size: 18px;
+        font-weight: 50;
+        line-height: 50px;
+        letter-spacing: 1px;
+        margin-left: 30px;
+    }
+
+p {
+    font-family: 'Helvetica Neue', sans-serif;
+  text-align: justify;
+}
+.example-card {
+  max-width: 40px;
+  margin: 10px;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+  
+mat-card {
+    box-shadow: 0px 0px 10px 0px #9b9b9b,
+        0 1px 1px 0 #9b9b9b,
+        0 1px 3px 0 #9b9b9b;
+    padding-bottom: 1em;
+    border-radius: 20px;
+    margin-bottom: 1em;
+    font-family: 'Helvetica Neue', sans-serif;
+    width: 250px;
+    height: 260px;
+    margin: 20px
+}
+
+
+
+mat-card-title {
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  font-weight: bolder;
+  justify-content: center;
+  display: flex;
+  font-family: 'Helvetica Neue', sans-serif;
+  
+}
+
+mat-card-subtitle {
+  color: balckblue;
+  background-color: rgb(255,222,212);
+  border-radius: 40px;
+  width: 100%;
+  font-size: 22px;
+  justify-content: left;
+  display: flex;
+  font-family: 'Helvetica Neue', sans-serif;
+  }
+
+  mat-card-content{
+    font-size: 14px;
+  }
+
+  mat-card-actions{
+    position: absolute;
+    right:    9px;
+    bottom:   10px;
+  }
+
+  .buttonCard{
+    background-color: rgb(17,80,255);
+    width: 280px;
+    height: 50px;
+    border-radius: 20px;
+    font-family: 'Helvetica Neue', sans-serif;
+  }
+
+  .buttonCard:hover {
+    background-color: rgb(0,42,169);
+    animation-name: fade;
+    animation-duration: 2s;
+    font-family: 'Helvetica Neue', sans-serif;
+  }
+
+  .textButtonCard{
+    text-align: left;
+    color: white;
+    width: 100%;
+    font-size: 15px;
+    font-family: 'Helvetica Neue', sans-serif;
+
+  }
+
+  .creditCard{
+    background-color: rgb(0,42,169);
+    color: white;
+    text-align: right;
+    font-family: 'Helvetica Neue', sans-serif;
+    border-radius: 20px;
+    font-size: 15px;
+
+  }
+  
+.creditArrow{
+    color:orange;
+    text-align: center;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 15px;
+}
+
+.topnav {
+    
+    color: black;
+    overflow: hidden;
+    font-family: 'Helvetica Neue', sans-serif;
+    border-bottom: 1px solid;
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+    background-color: white;
+    
+ }
+  
+  .topnav a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Helvetica Neue', sans-serif;
+    display: block;
+    
+  }
+  
+  .topnav a:hover {
+    color: blue;
+    font-family: 'Helvetica Neue', sans-serif;
+    background: #ddd;
+  }  
+
+  .categories{
+    font-size: 24px;
+    border-top: 1px solid;
+    font-family: 'Helvetica Neue', sans-serif;
+  }
+
+  .models{
+    padding-top: 30px;
+    font-size: 24px;
+    font-family: 'Helvetica Neue', sans-serif;
+  }
+
+  .logo-image{
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: -6px;
+}
+
+.card-header{
+    padding-left:150px;
+}
+
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+    padding: 10px;
+  }
+  
+  .grid-container > div {
+    background-color: white;
+    text-align: left;
+    padding: 20px 0;
+    font-size: 30px;
+  }
+  
+  .item1 {
+    grid-column-start: 1;
+    grid-column-end: 10;
+   
+    align-items: center;
+  }
+
+  .item2 {
+    
+    grid-row-start: 2;
+    grid-row-end: auto;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
+  .item3 {
+    grid-column-start: 2;
+    grid-column-end: 10;
+    grid-row-start: 2;
+    grid-row-end: auto;
+  }
+
+  .logo-image{
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: -6px;
+}

@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from "@angular/core";
 import { Subscription } from "rxjs";
 import { IProduct } from "./Product";
-import { MatCardModule } from '@angular/material/card';
+import { ProductService } from '../services/product.service'
 
 @Component({
   selector: 'app-catalog',
@@ -17,101 +17,74 @@ export class CatalogComponent implements OnInit, OnDestroy {
   sub!: Subscription;
 
   private _listFilter = '';
-
-  // get listFilter(): string {
-  //   return this._listFilter;
-  // }
-
-  // set listFilter(value: string) {
-  //   this._listFilter = value;
-  //   this.filteredProducts = this.performFilter(value);
-  // }
-
-  produt1 = {
-    ProductId: 1,
-    ProductName: 'Pelda',
-    ProductCategoryType: 'Tipus1',
-    ProductShortDescription: 'fkjafj lsa jflsaj flsj alj flsaj f',
-    ProductLongDescription: 'kf jsalfj lsa jfka jflsja lsajl fjsal jl',
-    ProductVersion: '1.10',
-    ProductVersionDate: '2022.08.01',
-    ProductVersionNotes: 'None',
-    };
     
-  filteredProducts: IProduct[] = [{
-    ProductId: 'aaa11',
-    ProductName: 'Pelda1',
-    ProductCategoryType: 'Tipus1',
-    ProductShortDescription: 'fkjafj lsa jflsaj flsj alj flsaj f',
-    ProductLongDescription: 'kf jsalfj lsa jfka jflsja lsajl fjsal jl',
-    ProductVersion: '1.10',
-    ProductVersionDate: '2022.08.01',
-    ProductVersionNotes: 'None',
-  },
-  {
-    ProductId: 'aaa12',
-    ProductName: 'Pelda2',
-    ProductCategoryType: 'Tipus2',
-    ProductShortDescription: 'fkjafj lsa ffffffffffffjflsaj flsj alj flsaj f',
-    ProductLongDescription: 'kf jsalfj lsa jfka jflsja lsajl fjsal jl',
-    ProductVersion: '1.10',
-    ProductVersionDate: '2022.08.01',
-    ProductVersionNotes: 'None',
-  },
-  {
-    ProductId: 'aaa13',
-    ProductName: 'Pelda3',
-    ProductCategoryType: 'Tipus1',
-    ProductShortDescription: 'fkjafj lsa gggggggggggjflsaj flsj alj flsaj f',
-    ProductLongDescription: 'kf jsalfj lsa jfka jflsja lsajl fjsal jl',
-    ProductVersion: '1.10',
-    ProductVersionDate: '2022.08.01',
-    ProductVersionNotes: 'None',
-  },
-  {
-    ProductId: 'aaa14',
-    ProductName: 'Pelda4',
-    ProductCategoryType: 'Tipus3',
-    ProductShortDescription: 'fkjafj lsa jflsaj flsj alj flsaj f',
-    ProductLongDescription: 'kf jsalfj lsa jfka jflsja lsajl fjsal jl',
-    ProductVersion: '1.10',
-    ProductVersionDate: '2022.08.01',
-    ProductVersionNotes: 'None',
-  },
-  {
-    ProductId: 'aaa11111',
-    ProductName: 'Pelda5',
-    ProductCategoryType: 'Tipus2',
-    ProductShortDescription: 'fkjafj lsa jflsaj flsj alj flsaj f',
-    ProductLongDescription: 'kf jsalfj lsa jfka jflsja lsajl fjsal jl',
-    ProductVersion: '1.10',
-    ProductVersionDate: '2022.08.01',
-    ProductVersionNotes: 'None',
-  }];
+  // filteredProducts: IProduct[] = [];
   products: IProduct[] = [];
+  filterString: string = '';
 
  
   constructor(
-    // private productService: ProductService
-    ) {}
+    private productService: ProductService
+    )
+    {
+      let btn = document.getElementById("coolButton");
+      if (btn!=null)
+      btn.addEventListener("click", (e:Event) => this.getTrainingName(4));
+    }
 
-  // performFilter(filterBy: string): IProduct[] {
-  //   filterBy = filterBy.toLocaleLowerCase();
-  //   return this.products.filter((product: IProduct) =>
-  //     product.productName.toLocaleLowerCase().includes(filterBy));
-  // }
-
+    getTrainingName(n:number){
+      console.log(n)
+   }
 
 
   ngOnInit(): void {
-    // this.sub = this.productService.getProducts().subscribe({
-    //   next: products => {
-    //     this.products = products;
-    //     this.filteredProducts = this.products;
-    //   },
-    //   error: err => this.errorMessage = err
-    // });
+     this.productService.GetProducts().then((productDtos)=>{
+      this.products = productDtos;
+      console.log(this.products);
+      console.log(this.products[0].productName);
+    });
   }
+
+  filterClicked(): void{
+    let buttons = ["Image Recognition", "Prediction", "Product Recommendations", "Preprocessing on Data", "Automate a Process"];
+    let currentButton;
+    this.filterString = '';
+    for (let i = 0; i < 5; i++) {
+      currentButton = <HTMLInputElement> document.getElementById(buttons[i]);
+      
+      if(currentButton.checked)
+      {
+        if (this.filterString != '')
+        {
+          this.filterString += '|'+ currentButton.name;
+        }
+        else{
+          this.filterString += currentButton.name;
+        }
+      }
+    
+    }
+    console.log(this.filterString)
+
+    if (this.filterString == '')
+    {
+      this.productService.GetProducts().then((productDtos)=>{
+        this.products = productDtos;
+      });
+    }
+    else
+    {
+      this.productService.GetProductsByFilters(this.filterString).then(
+        (result) => {
+          this.products = result;
+          console.log(result);
+        }
+      );
+    }
+
+    
+  }
+
 
   ngOnDestroy(): void {
     this.sub.unsubscribe();
@@ -119,3 +92,4 @@ export class CatalogComponent implements OnInit, OnDestroy {
 
   
 }
+
