@@ -4,7 +4,7 @@ import { firstValueFrom } from 'rxjs';
 
 import { UserDto } from './user-dto.model';
 
-import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
+import { HttpClient} from '@angular/common/http';
 
 import { environment } from '../../environments/environment'
 
@@ -17,11 +17,7 @@ import { environment } from '../../environments/environment'
 
 export class UserService {
 
-  // readonly options: APIHttpOptions;
-
-  constructor(private http:HttpClient) {}
-
-  
+  constructor(private http:HttpClient) {}  
 
   public async login(username: string, password: string): Promise<UserDto> {
     let body = JSON.stringify({userName: username, password: password})
@@ -30,7 +26,6 @@ export class UserService {
     };
     return firstValueFrom(
       
-      // this.api.login({ userParam: { userName: username, password: password } 
       this.http.post(`${environment.serverUrl}/User/login`,body, options)
       
     ).then((data: any) => {

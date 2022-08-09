@@ -18,13 +18,13 @@ C:\HumindZ\Internship2022Summer\SummerInternship2022\HumindZ.SummerInternship202
 C:\HumindZ\Internship2022Summer\SummerInternship2022\HumindZ.SummerInternship2022.Business\obj\Debug\netstandard2.1\HumindZ.SummerInternship2022.Business.csproj.CoreCompileInputs.cache
 C:\HumindZ\Internship2022Summer\SummerInternship2022\HumindZ.SummerInternship2022.Business\obj\Debug\netstandard2.1\HumindZ.SummerInternship2022.Business.dll
 C:\HumindZ\Internship2022Summer\SummerInternship2022\HumindZ.SummerInternship2022.Business\obj\Debug\netstandard2.1\HumindZ.SummerInternship2022.Business.pdb
+C:\Praktika-HumindZ\SummerInternship2022\HumindZ.SummerInternship2022.Business\bin\Debug\netstandard2.1\HumindZ.SummerInternship2022.Business.deps.json
+C:\Praktika-HumindZ\SummerInternship2022\HumindZ.SummerInternship2022.Business\bin\Debug\netstandard2.1\HumindZ.SummerInternship2022.Business.dll
+C:\Praktika-HumindZ\SummerInternship2022\HumindZ.SummerInternship2022.Business\bin\Debug\netstandard2.1\HumindZ.SummerInternship2022.Business.pdb
 C:\Praktika-HumindZ\SummerInternship2022\HumindZ.SummerInternship2022.Business\obj\Debug\netstandard2.1\HumindZ.SummerInternship2022.Business.GeneratedMSBuildEditorConfig.editorconfig
 C:\Praktika-HumindZ\SummerInternship2022\HumindZ.SummerInternship2022.Business\obj\Debug\netstandard2.1\HumindZ.SummerInternship2022.Business.AssemblyInfoInputs.cache
 C:\Praktika-HumindZ\SummerInternship2022\HumindZ.SummerInternship2022.Business\obj\Debug\netstandard2.1\HumindZ.SummerInternship2022.Business.AssemblyInfo.cs
 C:\Praktika-HumindZ\SummerInternship2022\HumindZ.SummerInternship2022.Business\obj\Debug\netstandard2.1\HumindZ.SummerInternship2022.Business.csproj.CoreCompileInputs.cache
 C:\Praktika-HumindZ\SummerInternship2022\HumindZ.SummerInternship2022.Business\obj\Debug\netstandard2.1\HumindZ.SummerInternship2022.Business.dll
 C:\Praktika-HumindZ\SummerInternship2022\HumindZ.SummerInternship2022.Business\obj\Debug\netstandard2.1\HumindZ.SummerInternship2022.Business.pdb
-C:\Praktika-HumindZ\SummerInternship2022\HumindZ.SummerInternship2022.Business\bin\Debug\netstandard2.1\HumindZ.SummerInternship2022.Business.deps.json
-C:\Praktika-HumindZ\SummerInternship2022\HumindZ.SummerInternship2022.Business\bin\Debug\netstandard2.1\HumindZ.SummerInternship2022.Business.dll
-C:\Praktika-HumindZ\SummerInternship2022\HumindZ.SummerInternship2022.Business\bin\Debug\netstandard2.1\HumindZ.SummerInternship2022.Business.pdb
 C:\Praktika-HumindZ\SummerInternship2022\HumindZ.SummerInternship2022.Business\obj\Debug\netstandard2.1\HumindZ.SummerInternship2022.Business.csproj.AssemblyReference.cache

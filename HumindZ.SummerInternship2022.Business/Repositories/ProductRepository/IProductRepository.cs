@@ -7,6 +7,7 @@ namespace HumindZ.SummerInternship2022.Business.Repositories.ProductRepository
     {
         Task<Product> GetByProductNameAsync(string productName);
         Task<IEnumerable<Product>> GetAllProductsAsync();
-/*        Task<IEnumerable<Product>> GetAllProductsByCategoryAsync(string categoryName);
-*/    }
+        Task<IEnumerable<Product>> GetAllProductsFilteredAsync(IEnumerable<string> filters);
+        
+    }
 }

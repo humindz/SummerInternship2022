@@ -4,7 +4,7 @@ import { firstValueFrom } from 'rxjs';
 
 import { ProductDto } from './product-dto.model';
 
-import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
+import { HttpClient} from '@angular/common/http';
 
 import { environment } from '../../environments/environment'
 
@@ -21,15 +21,23 @@ export class ProductService {
   public async GetProducts(): Promise<ProductDto[]> {
    
     return firstValueFrom(
-      
-      // this.api.login({ userParam: { userName: username, password: password } 
+
       this.http.get(`${environment.serverUrl}/Product`)
       
     ).then((data: any) => {
-      
       return data;
     });
-
-    
   }
+
+  public async GetProductsByFilters(filters: string): Promise<ProductDto[]> {
+   
+    return firstValueFrom(
+
+      this.http.get(`${environment.serverUrl}/Product/filtered?filter=${filters}`)
+      
+    ).then((data: any) => {
+      return data;
+    });
+  }
+
 }

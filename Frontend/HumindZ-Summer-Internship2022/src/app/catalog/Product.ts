@@ -5,7 +5,7 @@ export interface IProduct {
     productShortDescription: string;
     productLongDescription: string;
     productVersion: string;
-    productVersionDate: string;  //                 //dateTime helyett
+    productVersionDate: string; 
     productVersionNotes: string;
     productPrice: string;
 

@@ -1,7 +1,6 @@
 import { Component, OnDestroy, OnInit } from "@angular/core";
 import { Subscription } from "rxjs";
 import { IProduct } from "./Product";
-import { MatCardModule } from '@angular/material/card';
 import { ProductService } from '../services/product.service'
 
 @Component({
@@ -18,42 +17,74 @@ export class CatalogComponent implements OnInit, OnDestroy {
   sub!: Subscription;
 
   private _listFilter = '';
-
-  // get listFilter(): string {
-  //   return this._listFilter;
-  // }
-
-  // set listFilter(value: string) {
-  //   this._listFilter = value;
-  //   this.filteredProducts = this.performFilter(value);
-  // }
-
-
     
-  filteredProducts: IProduct[] = [];
+  // filteredProducts: IProduct[] = [];
   products: IProduct[] = [];
+  filterString: string = '';
 
  
   constructor(
     private productService: ProductService
-    ) {}
+    )
+    {
+      let btn = document.getElementById("coolButton");
+      if (btn!=null)
+      btn.addEventListener("click", (e:Event) => this.getTrainingName(4));
+    }
 
-  // performFilter(filterBy: string): IProduct[] {
-  //   filterBy = filterBy.toLocaleLowerCase();
-  //   return this.products.filter((product: IProduct) =>
-  //     product.productName.toLocaleLowerCase().includes(filterBy));
-  // }
-
+    getTrainingName(n:number){
+      console.log(n)
+   }
 
 
   ngOnInit(): void {
      this.productService.GetProducts().then((productDtos)=>{
-      this.filteredProducts = productDtos;
       this.products = productDtos;
       console.log(this.products);
       console.log(this.products[0].productName);
     });
   }
+
+  filterClicked(): void{
+    let buttons = ["Image Recognition", "Prediction", "Product Recommendations", "Preprocessing on Data", "Automate a Process"];
+    let currentButton;
+    this.filterString = '';
+    for (let i = 0; i < 5; i++) {
+      currentButton = <HTMLInputElement> document.getElementById(buttons[i]);
+      
+      if(currentButton.checked)
+      {
+        if (this.filterString != '')
+        {
+          this.filterString += '|'+ currentButton.name;
+        }
+        else{
+          this.filterString += currentButton.name;
+        }
+      }
+    
+    }
+    console.log(this.filterString)
+
+    if (this.filterString == '')
+    {
+      this.productService.GetProducts().then((productDtos)=>{
+        this.products = productDtos;
+      });
+    }
+    else
+    {
+      this.productService.GetProductsByFilters(this.filterString).then(
+        (result) => {
+          this.products = result;
+          console.log(result);
+        }
+      );
+    }
+
+    
+  }
+
 
   ngOnDestroy(): void {
     this.sub.unsubscribe();
@@ -61,3 +92,4 @@ export class CatalogComponent implements OnInit, OnDestroy {
 
   
 }
+

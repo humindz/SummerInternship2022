@@ -1,29 +1,16 @@
 
 
 <div class="topnav">
-    <a class="navbar-brand" href="/catalog">
-        <div class="logo-image">
-              <img src="./img-logo.png" class="img-fluid">
-        </div>
-  </a>
     <a href="/catalog">Catalog</a>
     <a href="/login">Login</a>
   </div>
-  <br><br><br>
+  <br>
 
+ 
 <div class='card'>
 
-    <!-- <div class="grid-container">
-    <div class="item1">
-      
-
-
-    </div> -->
-
+  
     <br><br><br>
-    <div>
-        
-
             <div class="grid-container" >
     
                 <div class="item1">
@@ -31,68 +18,65 @@
                     <h3>{{pageSubTitle}} </h3>
                 </div>
                 <div class="item2">
-                    <p class = "categories">Categories</p>
-                    <mat-checkbox >Optical Character Recognition</mat-checkbox><br>
-                    <mat-checkbox >Prediction</mat-checkbox><br>
-                    <mat-checkbox >Product Recommendations</mat-checkbox><br>
-                    <mat-checkbox >Preprocessing on Data</mat-checkbox><br>
-                    <mat-checkbox >Automate a Process</mat-checkbox><br>
+                    <p class = "categories">Categories</p>            
+
+                    <input type="checkbox" name="Image Recognition" id="Image Recognition" (click)="filterClicked()"> 
+                    <label for="Image Recognition">  Image Recognition</label><br>
+
+                    <input type="checkbox" name="Prediction" id="Prediction" (click)="filterClicked()"/>  
+                    <label for="Prediction">  Prediction</label><br>
+
+                    <input type="checkbox" name="Product Recommendations" id="Product Recommendations" (click)="filterClicked()"/>  
+                    <label for="Product Recommendations">  Product Recommendations</label><br>
+
+                    <input type="checkbox" name="Preprocessing on Data" id="Preprocessing on Data" (click)="filterClicked()"/>  
+                    <label for="Preprocessing on Data">  Preprocessing on Data</label> <br>
+
+                    <input type="checkbox" name="Automate a Process" id="Automate a Process" (click)="filterClicked()" />  
+                    <label for="Automate a Process">  Automate a Process</label><br>
+
                 </div>
                 <div class="item3">
                     <br>
                     <p>All Models</p>
-                    <div *ngFor="let product of products">
-                        <mat-card >
-                            <mat-card-header>
-                            
-                            <mat-card-title>{{product.productName}}</mat-card-title>
-                            <mat-card-subtitle>{{product.productCategoryType}}</mat-card-subtitle>
-                            </mat-card-header>
-                            
-                            <mat-card-content>
-                            <p>
-                                {{product.productShortDescription}}
-                            </p>
-                            </mat-card-content>
-                            <mat-card-actions>
-                                <button class="buttonCard">
-                                    <a class="textButtonCard">See Details </a> 
+                    
+
+                            <div style="display:flex; flex-wrap:wrap; justify-content:flex-start">
                                 
-                                <a class = "creditArrow">  &#8674;  </a>
-                                        
-                                <button class="creditCard">{{product.productPrice}} credits</button>
+                       
+                            <div *ngFor="let product of products" class="cardType">
+                                <mat-card>
+                                    <mat-card-header>
                                     
-                                </button>
-                            </mat-card-actions>
-                        </mat-card>
-                
+                                    <mat-card-title>{{product.productName}}</mat-card-title>
+                                    <mat-card-subtitle>{{product.productCategoryType}}</mat-card-subtitle>
+                                    </mat-card-header>
+                                    
+                                    <mat-card-content>
+                                    <p>
+                                        {{product.productShortDescription}}
+                                    </p>
+                                    </mat-card-content>
+                                    <mat-card-actions align="end">
+                                        <button class="buttonCard" >
+                                            <a class="textButtonCard">See Details </a> 
+                                        
+                                        <a class = "creditArrow">  &#8674;  </a>
+                                                
+                                        <button class="creditCard">{{product.productPrice}} credits</button>
+                                            
+                                        </button>
+                                    </mat-card-actions>
+                                </mat-card>
+                        
+                            </div>
                     </div>
-                </div>
-
-              </div>
-
-            <!-- <div class="grid-container"> -->
+                    </div>
+            </div>
 
             
-            <!-- <div class = "item1">
-            </div> -->
-
-            <!-- <div class = "item2">
-                
-
-            </div> -->
-
-        
-            <!-- <div >
-                
-
-                <div class = "item3">
-                    
-            </div>
-            </div>   -->
-        </div> 
-    </div>
-<!-- </div> -->
+            
+        <!-- </div>  -->
             
      
    

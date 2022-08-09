@@ -23,7 +23,11 @@ export class LoginComponent implements OnInit {
     let userPassword = (<HTMLInputElement>document.getElementById("password")).value;
     
     this.userService.login(userName, userPassword)
-    .then(()=>this.router.navigate(['catalog']));//.then();
+    .then(()=>{
+      this.router.navigate(['catalog'])
+    })
+
+    
 
   }
 }

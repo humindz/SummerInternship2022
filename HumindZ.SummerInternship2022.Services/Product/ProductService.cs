@@ -40,5 +40,37 @@ namespace HumindZ.SummerInternship2022.Services.Product
 
         }
 
+        
+        public async Task<IEnumerable<ProductDto>> GetProductsByFilters(string filters)
+        {
+           /* var filtersList = new List<string>();
+            filtersList.Add(filters);*/
+
+
+            string[] filtersList = filters.Split('|');
+
+            var results = await productRepository.GetAllProductsFilteredAsync(filtersList);
+            var productDtos = new List<ProductDto>();
+
+            foreach (var result in results)
+            {
+                var productDto = new ProductDto
+                {
+                    ProductId = result.ProductId,
+                    ProductName = result.ProductName,
+                    ProductCategoryType = result.ProductCategoryType,
+                    ProductShortDescription = result.ProductShortDescription,
+                    ProductLongDescription = result.ProductLongDescription,
+                    ProductVersion = result.ProductVersion,
+                    ProductVersionDate = result.ProductVersionDate,
+                    ProductVersionNotes = result.ProductVersionNotes,
+                    ProductPrice = result.ProductPrice,
+                };
+                productDtos.Add(productDto);
+            }
+            return productDtos;
+
+        }
+
     }
 }
